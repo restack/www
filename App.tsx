@@ -13,14 +13,16 @@ const App: React.FC = () => {
   };
 
   return (
-    <div className="bg-gray-950 text-gray-300 font-sans antialiased">
-      <main>
+    <>
+      <div className="fixed inset-0 -z-10 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-slate-900 via-gray-950 to-black"></div>
+      <div className="fixed inset-0 -z-10 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20 brightness-100 contrast-150 mix-blend-overlay"></div>
+      <main className="relative">
         <Hero onCapabilitiesClick={handleScrollToCapabilities} />
         <Features />
         <Skills ref={capabilitiesRef} />
         <Footer />
       </main>
-    </div>
+    </>
   );
 };
 

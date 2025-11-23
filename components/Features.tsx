@@ -37,20 +37,25 @@ const features = [
 
 const Features: React.FC = () => {
   return (
-    <section className="bg-gray-900 py-20 sm:py-24">
+    <section className="py-24 sm:py-32 relative">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="mx-auto max-w-3xl text-center">
-          <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">Critical problems I solve</h2>
-          <p className="mt-4 text-lg text-gray-400">
+        <div className="mx-auto max-w-3xl text-center mb-16">
+          <h2 className="font-display text-3xl font-bold tracking-tight text-white sm:text-4xl">Critical problems I solve</h2>
+          <p className="mt-4 text-lg text-slate-400">
             You’re moving fast, hiring researchers, burning GPU budget — but infra is lagging. I come in, design it right, make it stable, and leave you with playbooks your team can own.
           </p>
         </div>
-        <div className="mt-16 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {features.map((feature) => (
-            <div key={feature.title} className="flex transform flex-col rounded-xl border border-gray-800 bg-gray-950/50 p-6 shadow-lg transition-transform duration-300 hover:scale-105 hover:border-green-500/50">
-              <div className="mb-4">{feature.icon}</div>
-              <h3 className="text-lg font-semibold text-white">{feature.title}</h3>
-              <p className="mt-2 text-base text-gray-400">{feature.description}</p>
+            <div key={feature.title} className="group relative overflow-hidden rounded-2xl border border-white/5 bg-white/5 p-8 backdrop-blur-sm transition-all duration-300 hover:border-emerald-500/30 hover:bg-white/10 hover:-translate-y-1">
+              <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/10 via-transparent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100"></div>
+              <div className="relative z-10">
+                <div className="mb-6 inline-flex rounded-lg bg-white/5 p-3 text-emerald-400 ring-1 ring-white/10 group-hover:text-emerald-300 group-hover:ring-emerald-500/50 transition-all">
+                  {feature.icon}
+                </div>
+                <h3 className="text-xl font-semibold text-white font-display mb-3">{feature.title}</h3>
+                <p className="text-base text-slate-400 leading-relaxed">{feature.description}</p>
+              </div>
             </div>
           ))}
         </div>
