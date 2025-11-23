@@ -18,7 +18,7 @@ const Hero: React.FC<HeroProps> = ({ onCapabilitiesClick }) => {
       <div className="relative z-10 mx-auto max-w-5xl px-4 text-center">
         <div className="inline-flex items-center rounded-full border border-emerald-500/20 bg-emerald-500/5 px-3 py-1 text-sm font-medium text-emerald-400 backdrop-blur-sm mb-8">
           <span className="flex h-2 w-2 rounded-full bg-emerald-400 mr-2 animate-pulse"></span>
-          Available for Q4 2025 Projects
+          Where automation meets intelligence
         </div>
 
         <h1 className="font-display text-5xl font-bold tracking-tight text-white sm:text-7xl lg:text-8xl mb-8">
