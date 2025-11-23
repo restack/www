@@ -1,4 +1,4 @@
-# restack.teck
+# restack.tech
 
 ## Run Locally
 
