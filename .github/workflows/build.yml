@@ -59,7 +59,7 @@ jobs:
           cache-from: type=registry,ref=${{ env.REGISTRY }}/${{ env.REPO }}:cache
           cache-to: type=registry,ref=${{ env.REGISTRY }}/${{ env.REPO }}:cache,mode=max
 
-      - name: Sync image in Argo CD Repo
+      - name: Update k8s manifest
         uses: restack/actions/actions/k8s-manifest-updater@v1
         with:
           app_id: ${{ secrets.APP_ID }}
@@ -68,8 +68,10 @@ jobs:
           manifest_repo: 'ziwon/homelab'
           manifest_path: 'platform/stacks/05-workloads/overlays/home/landing.yaml'
           image: ${{ env.REGISTRY }}/${{ env.REPO }}:${{ steps.meta.outputs.version }}
-          yaml_path: 'apps[name=landing].helm.values'
-          nested_yaml_path: 'template.spec.containers[name=landing].image'
+          yaml_path: apps[name=landing].source.helm.values
+          nested_yaml_path: 'resources[0].spec.template.spec.containers[name=landing].image'
+          branch: main
+          create_pr: false
 
       - name: Image summary
         run: |
