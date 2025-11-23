@@ -69,7 +69,7 @@ jobs:
           manifest_path: 'platform/stacks/05-workloads/overlays/home/landing.yaml'
           image: ${{ env.REGISTRY }}/${{ env.REPO }}:${{ steps.meta.outputs.version }}
           yaml_path: apps[name=landing].source.helm.values
-          nested_yaml_path: 'resources[0].spec.template.spec.containers[name=landing].image'
+          nested_yaml_path: 'template.spec.containers[name=landing].image'
           branch: main
           create_pr: false
 
