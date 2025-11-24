@@ -42,7 +42,7 @@ const Features: React.FC = () => {
         <div className="mx-auto max-w-3xl text-center mb-16">
           <h2 className="font-display text-3xl font-bold tracking-tight text-white sm:text-4xl">Critical problems I solve</h2>
           <p className="mt-4 text-lg text-slate-400">
-            You’re moving fast, hiring researchers, burning GPU budget — but infra is lagging. I come in, design it right, make it stable, and leave you with playbooks your team can own.
+            You’re moving fast, hiring researchers, burning GPU budget — but infra is lagging. Restack come in, design it right, make it stable, and leave you with playbooks your team can own.
           </p>
         </div>
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">

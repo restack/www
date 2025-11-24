@@ -11,7 +11,7 @@ const Footer: React.FC = () => {
             Need this level of infra yesterday?
           </h2>
           <p className="mx-auto max-w-xl text-lg text-slate-400 mb-10">
-            I partner with AI teams as an embedded infra lead or short-term strike force. Early-stage, high urgency, ugly problems welcome.
+            Restack partner with AI teams as an embedded infra lead or short-term strike force. Early-stage, high urgency, ugly problems welcome.
           </p>
           <a
             href="mailto:contact@restack.tech"
