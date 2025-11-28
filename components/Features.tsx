@@ -40,7 +40,7 @@ const Features: React.FC = () => {
     <section className="py-24 sm:py-32 relative">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-3xl text-center mb-16">
-          <h2 className="font-display text-3xl font-bold tracking-tight text-white sm:text-4xl">Critical problems I solve</h2>
+          <h2 className="font-display text-3xl font-bold tracking-tight text-white sm:text-4xl">Critical problems we solve</h2>
           <p className="mt-4 text-lg text-slate-400">
             You’re moving fast, hiring researchers, burning GPU budget — but infra is lagging. Restack come in, design it right, make it stable, and leave you with playbooks your team can own.
           </p>
